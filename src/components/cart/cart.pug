@@ -1,0 +1,10 @@
+section.cart
+  .container
+    h1.page-title Корзина
+    .cart__form.js-cart-form
+      form(action="#" method="post")
+        include cart-items
+        .cart__order-registration
+          h2.page-title Оформление заказа
+          include order-registration-form
+          include order-registration-info

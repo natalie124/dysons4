@@ -1,0 +1,57 @@
+extends pug/layout
+
+block variables
+  -let title = "Стайлер Dyson HS01 Airwrap";
+
+block content
+  .pagination
+    .container
+      ul.pagination__list
+        li.pagination__item
+          a.pagination__link(href="#") Каталог
+        li.pagination__item
+          a.pagination__link(href="#") Уход за волосами
+        li.pagination__item
+          a.pagination__link(href="#") Стайлеры
+        li.pagination__item
+          a.pagination__link(href="#") Стайлер Dyson HS01 Airwrap
+
+  main
+    include components/product/product
+    .blog
+      .container
+        h2.title Видеоматериалы
+      .container.container--hp.blog__container
+        ul.blog__list
+          li.blog__item
+            .blog__media
+              +video("blog-4", "Распаковка стайлера Dyson Airwrap" )
+            a.blog__title(href="#") Распаковка стайлера Dyson Airwrap
+
+          li.blog__item
+            .blog__media
+              +video("blog-2", "Как сделать безупречные локоны. полный гид" )
+            a.blog__title(href="#") Как сделать безупречные локоны. полный гид
+
+          li.blog__item
+            .blog__media
+              +video("blog-3", "Стайлер для автоматической завивки волос – принцип работы" )
+            a.blog__title(href="#") Стайлер для автоматической завивки волос – принцип работы
+
+        button.blog__btn.btn-detail(type="button") Показать еще
+
+    .cards
+      .container
+        h2.title.title--btm C этим товаром покупают
+      .container.container--hp.container--npm
+        ul.cards__list
+          li.cards__item
+            +card("card-1", "Очиститель Dyson Pure Hot+Cool")
+          li.cards__item
+            +card("card-2", "Фен Dyson Supersonic <span>для волос</span>")
+          li.cards__item.cards__item--mobile-hidden
+            +card("card-3", "Стайлер Dyson Airwrap <span>для разных типов длинных волос</span>")
+        .catalog__show
+          button.btn-detail(type="button" data-text="Скрыть" data-visible="9") Показать еще <span class="js-show-all"></span>
+
+    include components/advantages/advantages

@@ -1,0 +1,6 @@
+{
+  "Exclude": [
+    "build",
+    "vendor"
+  ]
+}

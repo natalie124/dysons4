@@ -1,0 +1,37 @@
+extends pug/layout
+
+block variables
+  -let title = "Оформление заказа";
+
+block content
+  .pagination
+    .container.pagination__wrapper
+      ul.pagination__list
+        li.pagination__item
+          a.pagination__link(href="#") Корзина
+        li.pagination__item
+          a.pagination__link(href="#") Оформление заказа
+
+  main
+    .container
+      h1.page-title Моя корзина
+    .cart.js-cart-form
+      form
+        .container
+          .column
+            .cart__content.cart__content--items
+              include components/cart/cart-items
+            .cart__sidebar
+              .order
+                p.order__title В <span>корзине</span>  <a href="cart.html"></span>4<span> <span>товара</span></a>
+                p.order__price
+                 span.order__old-price <span>165 990</span> руб.
+                 span.order__new-price <span>159 960</span> руб.
+                a.order__btn.btn.btn--violet.js-registration-btn(href="#") Продолжить оформление
+                a.order__btn.btn.btn--light(href="#") Вернуться к покупкам
+                p.order__title
+                  +svg("box", 24, 21)
+                  | Способы получения заказа
+                  span.order__text Самовывоз из 10 магазинов&nbsp;сегодня
+                  span.order__text Доставим завтра и позже, 500&nbsp;руб.
+

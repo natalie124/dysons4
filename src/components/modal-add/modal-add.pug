@@ -1,0 +1,13 @@
+section.modal.modal-add.js-modal-add.js-modal.js-hide
+  .modal__wrapper.modal-add__wrapper
+    button.modal__close.btn-close.js-close-btn(type="button" title="Закрыть" tabindex="1")
+    .modal__container.modal-add__container
+      .modal__content.modal-add__content
+        h2.modal__title.modal-add__title Товар добавлен в корзину
+        .modal-add__img
+          +picture-png-webp("modal-item", 132, 273, "Стайлер Dyson HS01 Airwrap")
+        .modal-add__info
+          p.modal-add__name Стайлер Dyson HS01 Airwrap
+          p.modal-add__price <span>159 960</span> ₽
+          a.btn.modal-add__btn(href="cart.html") Продолжить оформление
+          button.btn.btn--light.js-close-btn.modal-add__btn.modal-add__btn--close(type="button") Продолжить покупки

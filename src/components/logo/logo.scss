@@ -1,0 +1,26 @@
+.logo {
+  display: block;
+
+  width: 134px;
+  height: 34px;
+
+  &:hover svg,
+  &:focus svg {
+    fill: #503181;
+  }
+
+  svg {
+    width: 100%;
+    height: 100%;
+
+    fill: #191919;
+
+    will-change: fill;
+    transition-property: fill;
+    transition-duration: 0.3s;
+  }
+
+  &--light svg {
+    fill: #ffffff;
+  }
+}

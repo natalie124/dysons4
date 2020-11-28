@@ -1,0 +1,52 @@
+@import "vendor/normalize";
+@import "global/variables";
+@import "global/mixins";
+@import "global/fonts";
+/*@import "global/animation";*/
+@import "global/global";
+// Блоки
+@import "blocks/buttons";
+@import "blocks/pagination";
+@import "blocks/select";
+@import "blocks/inputs";
+@import "blocks/quantity-block";
+@import "blocks/content-table";
+@import "blocks/content-text";
+@import "blocks/modal";
+
+// Компоненты
+@import "../components/header/header";
+@import "../components/nav/nav";
+@import "../components/nav-menu/nav-menu";
+@import "../components/logo/logo";
+@import "../components/search/search";
+@import "../components/phones/phones";
+@import "../components/footer/footer";
+@import "../components/promo/promo";
+@import "../components/promo/promo-banners";
+@import "../components/promo/promo-banner";
+@import "../components/promo/promo-menu";
+@import "../components/cards/cards";
+@import "../components/cards/card";
+@import "../components/blog/blog";
+@import "../components/video/video";
+@import "../components/advantages/advantages";
+@import "../components/catalog/catalog";
+@import "../components/cart/cart";
+@import "../components/cart/order";
+@import "../components/cart/cart-form";
+@import "../components/cart/cart-items";
+@import "../components/cart/order-total";
+@import "../components/cart/cart-items";
+@import "../components/product/product";
+@import "../components/product/product-gallery";
+@import "../components/product/product-description";
+@import "../components/product/product-tabs";
+@import "../components/product/product-files";
+@import "../components/modal-buy-click/modal-buy-click";
+@import "../components/modal-add/modal-add";
+
+/*@import "global/js";*/
+
+
+

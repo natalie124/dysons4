@@ -1,0 +1,53 @@
+{
+  "name": "project-name",
+  "version": "1.0.0",
+  "description": "",
+  "devDependencies": {
+    "autoprefixer": "^9.8.0",
+    "browser-sync": "^2.26.7",
+    "del": "^5.1.0",
+    "editorconfig-checker": "^3.0.5",
+    "eslint": "^6.8.0",
+    "eslint-config-htmlacademy": "^0.5.2",
+    "gulp": "4.0.x",
+    "gulp-concat": "^2.6.1",
+    "gulp-csso": "^3.0.1",
+    "gulp-imagemin": "^6.2.0",
+    "gulp-newer": "^1.4.0",
+    "gulp-plumber": "^1.2.1",
+    "gulp-postcss": "^8.0.0",
+    "gulp-pretty-html": "^2.0.10",
+    "gulp-pug": "^4.0.1",
+    "gulp-rename": "^1.4.0",
+    "gulp-sass": "^4.1.0",
+    "gulp-svgstore": "^7.0.1",
+    "gulp-uglify": "^3.0.2",
+    "gulp-webp": "^4.0.1",
+    "imagemin-mozjpeg": "^8.0.0",
+    "imagemin-pngquant": "^8.0.0",
+    "postcss-object-fit-images": "^1.1.2",
+    "stylelint": "^11.1.1",
+    "stylelint-config-htmlacademy": "^0.1.4",
+    "uglify-es": "github:mishoo/UglifyJS2#harmony"
+  },
+  "scripts": {
+    "editorconfig": "editorconfig-checker",
+    "stylelint": "stylelint \"src/sass/**/*.scss\" --syntax scss",
+    "eslint": "eslint \"src/js/**/*.js\"",
+    "test": "npm run editorconfig && npm run stylelint && npm run eslint",
+    "build:minify": "gulp build:minify",
+    "build": "gulp build",
+    "start": "gulp start"
+  },
+  "eslintIgnore": [
+    "vendor/"
+  ],
+  "browserslist": [
+    "last 2 versions",
+    "IE 11",
+    "Firefox ESR"
+  ],
+  "engines": {
+    "node": "8.15"
+  }
+}

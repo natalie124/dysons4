@@ -1,0 +1,80 @@
+section.cart-form
+  .cart-form__wrapper
+
+    h3.cart-form__title
+      +svg("box", 22, 22)
+      | Где и как вы хотите получить заказ?
+    .input-check.input-check--half
+      input(type="radio" name="cart-delivery" id="cart-delivery-express" value="express")
+      label(for="cart-delivery-express")
+        span Курьерская доставка
+      .select.select--delivery
+        .select__container
+          button.select__btn(type="button" id="delivery-btn" name="delivery-btn")  Доставка по России / СДЭК <span>800</span> руб
+          ul.select__options
+            li.select__option
+              input(type="radio" name="delivery" value="on-moscow" id="delivery-on-moscow")
+              label(for="delivery-on-moscow") Курьерская доставка по Москве в пределах МКАД <span>300</span> руб
+            li.select__option
+              input(type="radio" name="delivery" id="delivery-outside-moscow" value="outside-moscow")
+              label(for="delivery-outside-moscow")
+                span Стоимость доставки за пределами МКАД составляет <span>700</span>  руб
+            li.select__option
+              input(type="radio" name="delivery" id="delivery-sdec" value="sdec" checked)
+              label(for="delivery-sdec") Доставка по России / СДЭК <span>800</span>  руб
+            li.select__option
+              input(type="radio" name="delivery" id="delivery-pony" value="pony")
+              label(for="delivery-pony") Доставка по России / Пони экспресс <span>500</span>  руб
+    .input-check.input-check--half
+      input(type="radio" name="cart-delivery" id="cart-delivery-pickup" value="pickup")
+      label(for="cart-delivery-pickup")
+        span Самовывоз
+
+
+    h3.cart-form__title.cart-form__title--pay
+      +svg("pay", 24, 24)
+      | Как вам будет удобнее оплатить заказ?
+    .input-check
+      input(type="radio" name="payment" id="cart-payment-courier" value="courier")
+      label(for="cart-payment-courier")
+        span При получении курьеру
+    .input-check
+      input(type="radio" name="payment" id="cart-payment-card" value="card" checked)
+      label(for="cart-payment-card")
+        span Оплата картой на сайте
+
+
+    h3.cart-form__title.cart-form__title--person
+      +svg("person", 25, 30)
+      | Укажите данные получателя заказа
+    .input-item.input-item--half
+      label(for="cart-surname") Фамилия
+      input(type="text" name="surname" id="cart-surname" placeholder="Фамилия" required)
+    .input-item.input-item--half
+      label(for="cart-name") Имя
+      input(type="text" name="name" id="cart-name" placeholder="Имя" required)
+    .input-item.input-item--half
+      label(for="cart-phone") Номер телефона
+      input(type="tel" name="phone" id="cart-phone" placeholder="Номер телефона" required)
+    .input-item.input-item--half
+      label(for="cart-email") Электронная почта
+      input(type="email" name="email" id="cart-email" placeholder="Электронная почта" required)
+
+
+    h3.cart-form__title.cart-form__title--location
+      +svg("location", 22, 30)
+      | Укажите адрес доставки
+    .input-item.input-item--half
+      label(for="cart-city") Город
+      input(type="text" name="city" id="cart-city" placeholder="Город" required)
+    .input-item
+      label(for="cart-street") Улица
+      input(type="text" name="street" id="cart-street" placeholder="Улица" required)
+    .input-item.input-item--quarter
+      label(for="cart-house") Дом
+      input(type="text" name="house" id="cart-house" placeholder="Дом" required)
+    .input-item.input-item--quarter
+      label(for="cart-flat") Кв / офис
+      input(type="text" name="flat" id="cart-flat" placeholder="Кв / офис" required)
+
+

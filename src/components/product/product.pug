@@ -1,0 +1,20 @@
+section.product
+  .container
+    h1.page-title Стайлер Dyson HS01 Airwrap
+    .product__wrapper
+      .product__gallery
+        include product-gallery
+      .product__description
+        include product-description
+      .product__info
+        include product-info
+    .product__about
+      .product__files.product-files
+        a.product-files__link(href="files/instruction.pdf" target="_blank")
+          +svg("pdf", 32, 40)
+          | Инструкция для Dyson HS01 Airwrap Complete
+        a.product-files__link(href="files/instruction.pdf" target="_blank")
+          +svg("pdf", 32, 40)
+          | Скачать сертификат соответствия
+      .product__tabs
+        include product-tabs

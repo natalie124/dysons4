@@ -1,0 +1,140 @@
+.pagination {
+  width: 100%;
+  padding: 50px 0;
+
+  background-color: #fff;
+
+  @media (max-width: $tablet) {
+    padding: 35px 0;
+  }
+
+  @media (max-width: $mobile) {
+    padding: 25px 0;
+  }
+
+  &__wrapper {
+    @media(max-width: $mobile) {
+      position: relative;
+
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+
+      padding: 0 0 0 20px;
+
+      &::before {
+        position: absolute;
+        z-index: 1;
+        left: 0;
+        top: 0;
+
+        height: 100%;
+        width: 60px;
+
+        background: linear-gradient(to right, #fff, rgba(255, 255, 255, 0));
+
+        content: "";
+      }
+
+      &::after {
+        position: absolute;
+        z-index: 1;
+        right: 0;
+        top: 0;
+
+        height: 100%;
+        width: 50px;
+
+        background: linear-gradient(to left, #fff, rgba(255, 255, 255, 0));
+
+        content: "";
+      }
+    }
+  }
+
+  &__list {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+
+    @media(max-width: $mobile) {
+      flex-wrap: nowrap;
+
+      overflow-x: auto;
+    }
+  }
+
+  &__item {
+    position: relative;
+
+    &::after {
+      position: absolute;
+      right: 15px;
+
+      @include ft-mul-3(16px, 1.5, #525252);
+      letter-spacing: 0.025em;
+
+      content:"/";
+
+      @media (max-width: $mobile) {
+        font-size: 13px;
+      }
+    }
+
+    &:last-child {
+      &::after {
+        display: none;
+      }
+      .pagination__link {
+        cursor: default;
+
+        &:hover,
+        &:focus {
+          text-decoration: none;
+        }
+
+        &:active {
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  &__link {
+    display: inline-block;
+    vertical-align: baseline;
+
+    margin: 0 30px 5px;
+
+    @include ft-mul-3(16px, 1.5, #525252);
+    letter-spacing: 0.025em;
+    text-decoration: none;
+
+    transition-property: opacity;
+    transition-duration: 0.3s;
+
+    @media (max-width: $mobile) {
+      font-size: 13px;
+      white-space: nowrap;
+    }
+
+    &:first-of-type {
+      margin-left: 0;
+    }
+
+    &:hover,
+    &:focus {
+      text-decoration: underline;
+    }
+
+    &:active {
+      opacity: 0.5;
+    }
+  }
+}

@@ -1,0 +1,25 @@
+section.modal.modal-buy-click.js-modal-buy-click.js-modal.js-hide
+  .modal__wrapper.modal-buy-click__wrapper
+    button.modal__close.btn-close.js-close-btn(type="button" title="Закрыть" tabindex="1")
+    .modal__container.modal-buy-click__container
+      .modal__content.modal-buy-click__content
+        .modal-buy-click__img
+          +picture-png-webp("modal-item", 237, 480, "Фен Dyson Supersonic для волос")
+        .modal-buy-click__info
+          h2.modal__title Стайлер Dyson HS01 Airwrap
+          form
+            .input-item
+              label(for="modal-buy-click-name") Имя
+              input(type="text" name="name" id="modal-buy-click-name" placeholder="Имя" required)
+            .input-item
+              label(for="modal-buy-click-phone") Номер телефона
+              input(type="tel" name="phone" id="modal-buy-click-phone" placeholder="Номер телефона" required)
+            .input-item
+              label(for="modal-buy-click-address") Электронная почта
+              input(type="text" name="name" id="modal-buy-click-address" placeholder="Электронная почта" required)
+            p.modal-buy-click__price
+              span.modal-buy-click__old-price  <span>45 990</span> ₽
+              span.modal-buy-click__new-price  <span>39 990</span> ₽
+            button.btn.btn--light(type="submit")
+              +svg( "mouse", 15, 30, "Купить в 1 клик" )
+              | Купить в 1 клик

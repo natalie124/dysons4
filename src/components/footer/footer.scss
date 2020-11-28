@@ -1,0 +1,63 @@
+.footer {
+  color: #808080;
+  background-color: #19181a;
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
+    padding: 34px 0 38px;
+
+    @media (max-width: $mobile) {
+      align-items: flex-start;
+    }
+  }
+
+  &__logo {
+    margin-bottom: 30px;
+  }
+
+  &__menu {
+    width: 100%;
+    margin-bottom: 32px;
+
+    ul {
+      justify-content: center;
+    }
+  }
+
+  &__phones {
+    margin-bottom: 33px;
+  }
+
+  &__info {
+    text-align: center;
+    margin-bottom: 30px;
+
+    @media (max-width: $mobile) {
+      text-align: left;
+    }
+  }
+
+  &__text {
+    margin: 0;
+    padding: 0;
+
+    @include ft-mont-5(12px, 16px, #808080);
+
+    a {
+      @include ft-mont-5(12px, 16px, #808080);
+      text-decoration: none;
+
+      transition: all 0.3s ease;
+
+      &:hover,
+      &:focus {
+        color: rgba(255, 255, 255, 0.9);;
+        text-decoration: underline;
+      }
+    }
+  }
+}

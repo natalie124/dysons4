@@ -1,0 +1,22 @@
+.phones {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+
+  &__link {
+    padding: 5px 0;
+
+    @include ft-fut-4(18px, 1.2, #2c2c2c);
+    text-decoration: none;
+
+    &:hover,
+    &:focus {
+      color: #513280;
+    }
+  }
+
+  &--light &__link {
+    color: #fff;
+  }
+}

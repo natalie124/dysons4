@@ -1,0 +1,174 @@
+.order {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+
+  width: 311px;
+  padding: 0 9.9% 25px;
+  margin: 0 auto;
+
+  background-color: #fff;
+
+  @media (max-width: $laptop) {
+    width: 255px;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+
+  @media (max-width: $mobile) {
+    width: 100%;
+    padding: 28px 15px 0;
+
+    box-shadow: 0 0 20px 0 rgba(21, 20, 35, 0.05);
+  }
+
+  &--product {
+    padding-top: 28px;
+    margin-right: 0;
+
+    box-shadow: 0 0 20px 0 rgba(21, 20, 35, 0.05);
+
+    @media (max-width: $desktop) {
+      width: 283px;
+      padding-left: 15px;
+      padding-right: 15px;
+      margin: 0;
+    }
+
+    @media (max-width: $tablet) {
+      width: 100%;
+      margin-top: 20px;
+
+      box-shadow: none;
+    }
+
+    @media (max-width: $mobile) {
+      margin-top: 0;
+      margin-bottom: 27px;
+      padding: 28px 15px 0;
+
+      box-shadow: 0 0 20px 0 rgba(21, 20, 35, 0.05);
+    }
+  }
+
+  &__title {
+    position: relative;
+    width: 100%;
+    margin: 0 0 9px;
+    padding: 0 0 0 34px;
+
+    @include ft-mul-5(14px, 25px, #2f2f2f);
+    letter-spacing: 0.005em;
+
+    &::before {
+      position: absolute;
+      z-index: 1;
+      left: 0;
+      top: 7px;
+
+      width: 12px;
+      height: 12px;
+
+
+      background-color: #28a861;
+      border-radius: 3px;
+
+      content: "";
+    }
+
+    svg {
+      position: absolute;
+      z-index: 2;
+      left: 0;
+      top: 7px;
+
+      width: 24px;
+      height: 21px;
+
+      fill: #503281;
+      stroke: #503281;
+      background-color: #fff;
+    }
+
+    a {
+      color: inherit;
+      transition: all 0.3s ease;
+
+      &:hover,
+      &:focus {
+        color: #503281;
+        text-decoration: none;
+      }
+    }
+  }
+
+  &__text {
+    display: inline-block;
+    vertical-align: baseline;
+
+    width: 100%;
+    margin: 0 0 20px;
+    padding: 0;
+
+    @include ft-mul-4(14px, 20px, #898888);
+    letter-spacing: 0.005em;
+
+    a {
+      color: inherit;
+      transition: all 0.3s ease;
+
+      &:hover,
+      &:focus {
+        color: #503281;
+        text-decoration: none;
+      }
+    }
+  }
+
+  &__price {
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    width: 100%;
+    margin: 11px 0 13px;
+    padding: 0 0 0 34px;
+
+    @include ft-fut-4(36px, 1.2, #503181);
+
+    @media (max-width: $mobile) {
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+  }
+
+  &__old-price {
+    max-width: 100%;
+    margin-bottom: 15px;
+
+    @include ft-fut-4(20px, 1.2, #8c8c8c);
+    text-decoration: line-through;
+
+    @media (max-width: $mobile) {
+      margin-right: 15px;
+    }
+  }
+
+  &__new-price {
+    max-width: 100%;
+    margin-bottom: 15px;
+
+    @include ft-fut-4(36px, 1.2, #503181);
+  }
+
+  &__btn {
+    margin-bottom: 33px;
+
+    @media (max-width: $mobile) {
+    width: 100%;
+    }
+  }
+}

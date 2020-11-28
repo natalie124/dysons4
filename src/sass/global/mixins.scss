@@ -1,0 +1,56 @@
+@mixin ft-mont-4($size, $height, $color) {
+  font-family: "Montserrat Regular", "Arial", sans-serif;
+  font-size: $size;
+  line-height: $height;
+  font-weight: 400;
+  color: $color;
+}
+@mixin ft-mont-5($size, $height, $color) {
+  font-family: "Montserrat Medium", "Arial", sans-serif;
+  font-size: $size;
+  line-height: $height;
+  font-weight: 500;
+  color: $color;
+}
+@mixin ft-mont-7($size, $height, $color) {
+  font-family: "Montserrat Bold", "Arial", sans-serif;
+  font-size: $size;
+  line-height: $height;
+  font-weight: 700;
+  color: $color;
+}
+@mixin ft-fut-4($size, $height, $color) {
+  font-family: "Futura DemiC", "Arial", sans-serif;
+  font-size: $size;
+  line-height: $height;
+  font-weight: 400;
+  color: $color;
+}
+@mixin ft-mul-3($size, $height, $color) {
+  font-family: "Muller Light", "Arial", sans-serif;
+  font-size: $size;
+  line-height: $height;
+  font-weight: 300;
+  color: $color;
+}
+@mixin ft-mul-4($size, $height, $color) {
+  font-family: "Muller Regular", "Arial", sans-serif;
+  font-size: $size;
+  line-height: $height;
+  font-weight: 400;
+  color: $color;
+}
+@mixin ft-mul-5($size, $height, $color) {
+  font-family: "Muller Medium", "Arial", sans-serif;
+  font-size: $size;
+  line-height: $height;
+  font-weight: 500;
+  color: $color;
+}
+@mixin ft-mul-7($size, $height, $color) {
+  font-family: "Muller Bold", "Arial", sans-serif;
+  font-size: $size;
+  line-height: $height;
+  font-weight: 700;
+  color: $color;
+}

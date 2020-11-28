@@ -1,0 +1,28 @@
+extends pug/layout
+
+block variables
+  -let title = "Оформление заказа";
+
+block content
+  .pagination
+    .container.pagination__wrapper
+      ul.pagination__list
+        li.pagination__item
+          a.pagination__link(href="#") Корзина
+        li.pagination__item
+          a.pagination__link(href="#") Оформление заказа
+
+  main
+    .container
+      h1.page-title Оформление заказа
+    .cart.js-cart-form
+      form
+        .container
+          .column
+            .cart__content
+              include components/cart/cart-form
+            .cart__sidebar
+              include components/cart/order
+        .container
+          .cart__total
+            include components/cart/order-total

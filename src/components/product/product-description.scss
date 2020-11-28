@@ -1,0 +1,22 @@
+.product-description {
+  width: 100%;
+  margin-bottom: 40px;
+
+  @media (max-width: $mobile) {
+    margin-bottom: 20px;
+  }
+
+  &__title {
+    width: 100%;
+    margin: 0 0 19px;
+    padding: 0;
+
+    @include ft-mul-7(16px, 2.25, #2c2c2c);
+    letter-spacing: 0.005em;
+
+    &:hover,
+    &:focus {
+      text-decoration: none;
+    }
+  }
+}

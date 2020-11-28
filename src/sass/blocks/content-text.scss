@@ -1,0 +1,12 @@
+.content-text {
+  width: 100%;
+
+  p {
+    width: 100%;
+    margin: 0 0 28px;
+    padding: 0;
+
+    @include ft-mul-4(14px, 1.57, #737373);
+    letter-spacing: 0.005em;
+  }
+}

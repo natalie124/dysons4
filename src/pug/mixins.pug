@@ -1,0 +1,50 @@
+mixin svg( name, width, height )
+  svg( width=("" + width) height=("" + height) aria-hidden="true" )
+    use( xlink:href=("#" + name) )
+
+mixin img-svg( name, width, height, alt )
+  img( src="img/" + name + ".svg" width=("" + width) height=("" + height) alt="" + alt )
+
+mixin img-jpg( name, width, height, alt )
+  img( src="img/" + name + ".jpg" srcset="img/" + name + "@2x.jpg 2x" width=("" + width) height=("" + height) alt="" + alt )
+
+mixin img-png( name, width, height, alt )
+  img( src="img/" + name + ".png" srcset="img/" + name + "@2x.png 2x" width=("" + width) height=("" + height) alt="" + alt )
+
+mixin picture-jpg-webp( name, width, height, alt )
+  picture
+    source(type="image/webp" srcset="img/webp/" + name + ".webp, img/webp/" + name + "@2x.webp 2x")
+    img( src="img/" + name + ".jpg" srcset="img/" + name + "@2x.jpg 2x" width=("" + width) height=("" + height) alt="" + alt )
+
+mixin picture-png-webp( name, width, height, alt )
+  picture
+    source(type="image/webp" srcset="img/webp/" + name + ".webp, img/webp/" + name + "@2x.webp 2x")
+    img( src="img/" + name + ".png" srcset="img/" + name + "@2x.png 2x" width=("" + width) height=("" + height) alt="" + alt )
+
+mixin card( image, title )
+  .card
+    a.card__img(href="#")
+      +picture-png-webp( "" + image, 350, 300, title )
+    a.card__title(href="#") !{title}
+    a.card__price <span> 45 500 </span> руб
+    button.card__btn.btn-cart.js-card-cart(type="button")
+      +svg("cart", 22, 22)
+      | В корзину
+
+mixin card-banner( image, title )
+  .card.card--banner
+    a.card__img(href="#")
+      +picture-png-webp( "" + image, 555, 320, title )
+    a.card__title(href="#") !{title}
+    a.card__price <span> 45 500 </span> руб
+    button.card__btn.btn-cart.btn-cart--dark.js-card-cart(type="button")
+      +svg("cart", 22, 22)
+      | В корзину
+
+mixin video( image, alt )
+  .video(data-url="https://www.youtube.com/embed/Ph5sOtR6pls")
+    a.video__link(href="https://www.youtube.com/watch?v=Ph5sOtR6pls")
+      +picture-png-webp("" + image, 350, 240, "" + alt)
+    button.video__btn.btn-video(type="button" title="Смотреть видео")
+      +svg("video-button", 40, 44)
+

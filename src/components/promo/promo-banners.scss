@@ -1,0 +1,19 @@
+.promo-banners {
+  &__list {
+    position: relative;
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: stretch;
+
+    width: 100%;
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+  }
+
+  &__item {
+    min-width: 100%;
+  }
+}

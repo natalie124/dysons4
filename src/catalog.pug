@@ -1,0 +1,19 @@
+extends pug/layout
+
+block variables
+  -let title = "Стайлеры";
+
+block content
+  .pagination
+    .container.pagination__wrapper
+      ul.pagination__list
+        li.pagination__item
+          a.pagination__link(href="#") Каталог
+        li.pagination__item
+          a.pagination__link(href="#") Уход за волосами
+        li.pagination__item
+          a.pagination__link(href="#") Стайлеры
+
+  main
+    include components/catalog/catalog
+    include components/blog/blog

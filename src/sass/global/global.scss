@@ -1,0 +1,157 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+.visually-hidden,
+input[type="checkbox"],
+input[type="radio"] {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+body {
+  width: 100%;
+  min-width: $width-min;
+
+  @include ft-mul-4(15px, 1.2, #0f0f0f);
+}
+
+.scroll-hidden {
+  overflow: hidden;
+  height: 100vh;
+}
+
+.scroll-hidden.scrollbar {
+  padding-right: 15px;
+}
+
+img {
+  max-width: 100%;
+
+  object-fit: cover;
+}
+
+input {
+  appearance: none;
+
+  &::-ms-clear {
+    display: none;
+  }
+
+  &::-ms-reveal {
+    display: none;
+  }
+
+  &::-webkit-credentials-auto-fill-button,
+  &::-webkit-caps-lock-indicator {
+    visibility: hidden;
+    pointer-events: none;
+    position: absolute;
+    right: 0;
+  }
+}
+
+header,
+main,
+footer {
+  width: 100%;
+}
+
+footer {
+  margin-top: auto;
+}
+
+.sprite {
+  display: none;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+
+  width: 100%;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 1170px;
+  width: 100%;
+  padding: 0 30px;
+  margin: 0 auto;
+
+  @media (min-width: 768px) {
+
+    &--hp {
+      padding: 0 15px;
+    }
+  }
+
+  @media (max-width: $mobile) {
+    padding: 0 20px;
+
+    &--npm {
+      padding: 0;
+    }
+  }
+}
+
+.column {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  @media (max-width: $mobile) {
+    flex-wrap: wrap;
+  }
+}
+
+.title {
+  width: 100%;
+  margin: 0 0 30px;
+  padding: 0;
+
+  @include ft-mul-7(30px, 1.2, #513280);
+  letter-spacing: 0.005em;
+
+  &--btm {
+    @media (max-width: $mobile) {
+      padding-top: 40px;
+
+      border-top: 2px solid #d5d5d5;
+    }
+  }
+}
+
+.page-title {
+  max-width: 100%;
+  margin: 0 0 35px;
+  padding: 0;
+
+  @include ft-mul-5(42px, 1, #222222);
+  letter-spacing: 0.005em;
+
+  @media (max-width: $mobile) {
+    margin-bottom: 25px;
+
+    @include ft-mul-7(30px, 1.2, #222222);
+  }
+}

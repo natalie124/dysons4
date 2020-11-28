@@ -1,0 +1,111 @@
+.advantages {
+  width: 100%;
+  margin-bottom: 118px;
+
+  &--light {
+    margin-bottom: 80px;
+  }
+
+  @media (max-width: $mobile) {
+    margin-bottom: 26px;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+    background: url("../img/advantages-bg.jpg") no-repeat #553784;
+    border-radius: 10px;
+
+    @media (max-width: $mobile) {
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+
+      background: transparent;
+      border-radius: 0;
+    }
+  }
+
+  &--light &__list {
+    background: #fff;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
+    width: 33.33%;
+    padding: 8.3% 0 5.7%;
+
+    @media (max-width: $mobile) {
+      width: 100%;
+      margin-bottom: 10px;
+
+      background: #553784;
+      border-radius: 10px;
+    }
+
+    svg {
+      width: 58px;
+      height: 58px;
+      margin-bottom: 34px;
+
+      fill: #fff;
+    }
+
+    p {
+      max-width: 215px;
+      width: 100%;
+      margin: 0;
+      padding: 0;
+
+      @include ft-mul-7(18px, 1.2, #fff);
+      text-align: center;
+
+
+      @media (max-width: $tablet) {
+        font-size: 16px;
+      }
+    }
+  }
+
+  &--light &__item {
+    flex-direction: row;
+    padding: 0;
+
+    background-color: #fff;
+
+    @media (max-width: $mobile) {
+      margin-bottom: 20px;
+    }
+
+    svg {
+      width: 25px;
+      height: 25px;
+      margin-bottom: 0;
+      margin-right: 24px;
+
+      fill: #503181;
+      opacity: 0.18;
+    }
+
+    p {
+      @include ft-mul-5(16px, 1.2, #2a2a2a);
+      text-align: left;
+
+      @media (max-width: $mobile) {
+        font-size: 14px;
+      }
+    }
+  }
+}
+

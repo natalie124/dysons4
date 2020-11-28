@@ -1,0 +1,94 @@
+.nav {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+
+  @media (max-width: $mobile) {
+    justify-content: space-between;
+    flex-wrap: nowrap;
+  }
+
+  &__btn {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 40px;
+    height: 40px;
+    padding: 11.5px 9px;
+    margin: 0 18px 0 0;
+
+    background-color: transparent;
+    border: none;
+    border-radius: 1.5px;
+
+    transition: all 0.3s ease;
+
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
+      background-color: #513280;
+    }
+
+    &:hover span,
+    &:focus span,
+    &:hover span::before,
+    &:focus span::before,
+    &:hover span::after,
+    &:focus span::after {
+      background-color: #ffffff;
+    }
+
+    span::before,
+    span::after {
+      position: absolute;
+      left: 9px;
+
+      content: "";
+    }
+
+    span::before {
+      top: 11.5px;
+    }
+
+    span::after {
+      bottom: 11.5px;
+    }
+
+    span,
+    span::before,
+    span::after {
+      width: 22px;
+      height: 3px;
+
+      background-color: #4c4c4c;
+      border-radius: 1.5px;
+
+      transition: all 0.3s ease;
+    }
+  }
+
+  &__menu {
+    flex-grow: 2;
+
+    width: 65%;
+    margin: 0 1vw;
+
+    @media (max-width: $desktop) {
+      margin: 0 10px 0 0;
+    }
+
+    @media (max-width: $mobile) {
+      display: none;
+    }
+  }
+
+  &__logo {
+    margin-left: auto;
+  }
+}

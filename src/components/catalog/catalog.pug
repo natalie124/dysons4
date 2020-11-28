@@ -1,0 +1,61 @@
+section.catalog
+  .container
+    .catalog__header
+      h1.catalog__title.page-title  Стайлеры
+      .catalog__filters
+        form
+          .select
+            .select__container
+              button.select__btn(type="button" id="catalog-filter-sort" name="catalog-filter-sort-btn") Сначала дешевые
+              ul.select__options
+                li.select__option
+                  input(type="radio" name="catalog-filter-sort" value="expensive" id="catalog-filter-expensive")
+                  label(for="catalog-filter-expensive" tabindex="0") Сначала дорогие
+                li.select__option
+                  input(type="radio" name="catalog-filter-sort" value="cheapest" id="catalog-filter-cheapest" checked)
+                  label(for="catalog-filter-cheapest" tabindex="0") Сначала дешевые
+                li.select__option
+                  input(type="radio" name="catalog-filter-sort" value="popular" id="catalog-filter-popular")
+                  label(for="catalog-filter-popular" tabindex="0") Популярные
+                li.select__option
+                  input(type="radio" name="catalog-filter-sort" value="new" id="catalog-filter-new")
+                  label(for="catalog-filter-new" tabindex="0") Новинки
+
+  .advantages.advantages--light
+    .container
+      ul.advantages__list
+        li.advantages__item
+          +svg("check", 25, 25)
+          p Доставка по Москве за&nbsp;2&nbsp;часа
+        li.advantages__item
+          +svg("check", 25, 25)
+          p Доставка по России за&nbsp;2&nbsp;-&nbsp;3&nbsp;дня
+        li.advantages__item
+          +svg("check", 25, 25)
+          p Гарантия на продукцию 2&nbsp;года
+
+  .cards
+    .container.container--hp.container--npm
+      ul.cards__list
+        li.cards__item
+          +card("card-1", "Очиститель Dyson Pure Hot+Cool")
+        li.cards__item
+          +card("card-2", "Фен Dyson Supersonic <span>для волос</span>")
+        li.cards__item
+          +card("card-3", "Стайлер Dyson Airwrap <span>для разных типов длинных волос</span>")
+        li.cards__item
+          +card("card-2", "Очиститель Dyson Pure Hot+Cool")
+        li.cards__item
+          +card("card-1", "Фен Dyson Supersonic <span>для волос</span>")
+        li.cards__item
+          +card("card-2", "Стайлер Dyson Airwrap <span>для разных типов длинных волос</span>")
+        li.cards__item.cards__item--mobile-hidden
+          +card("card-1", "Очиститель Dyson Pure Hot+Cool")
+        li.cards__item.cards__item--mobile-hidden
+          +card("card-2", "Фен Dyson Supersonic <span>для волос</span>")
+        li.cards__item.cards__item--mobile-hidden
+          +card("card-3", "Стайлер Dyson Airwrap <span>для разных типов длинных волос</span>")
+
+
+      .catalog__show
+        button.btn-detail(type="button" data-text="Скрыть" data-visible="9") Показать еще <span class="js-show-all"></span>

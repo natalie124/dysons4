@@ -1,0 +1,15 @@
+header.header
+  .header__container
+    .header__left
+      include ../nav/nav
+    .header__right
+
+      .header__phones
+        include ../phones/phones
+
+      .header__search
+        include ../search/search
+
+      a.header__cart(href="#" title="Корзина")
+        +svg("cart", 22, 22)
+        span.header__cart-number 12

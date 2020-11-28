@@ -1,0 +1,16 @@
+.order.order--product
+  p.order__title В <span>наличии</span>
+  p.order__price
+   span.order__old-price <span>45 990</span> руб.
+   span.order__new-price <span>39 990</span> руб.
+  button.order__btn.btn.btn--violet.js-registration-btn.js-card-cart(type="button")
+    +svg("cart", 22, 22)
+    | Добавить в корзину
+  button.order__btn.btn.btn--light.js-buy-click-btn(type="button")
+    +svg("mouse", 15, 30)
+    | Купить в 1 клик
+  p.order__title
+    +svg("box", 24, 21)
+    | Способы получения заказа
+    span.order__text Самовывоз из 10 магазинов&nbsp;сегодня
+    span.order__text Доставим завтра и позже, 500&nbsp;руб.
