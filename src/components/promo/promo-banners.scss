@@ -1,4 +1,7 @@
 .promo-banners {
+  position: relative;
+
+  overflow: hidden;
   &__list {
     position: relative;
 
@@ -15,5 +18,6 @@
 
   &__item {
     min-width: 100%;
+    min-height: 100%;
   }
 }

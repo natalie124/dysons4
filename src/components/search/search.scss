@@ -1,4 +1,6 @@
 .search {
+  position: relative;
+
   &__btn {
     display: flex;
     justify-content: center;
@@ -13,16 +15,29 @@
 
     background-color: transparent;
     border: none;
+    border-radius: 1.5px;
 
     transition: all 0.3s ease;
 
     cursor: pointer;
+    outline: none;
 
-    &:hover,
-    &:focus {
+    &.active {
+      background-color: #503181;
+
       svg {
-        width: 30px;
-        height: 30px;
+        fill: #fff;
+        stroke: #fff;
+        transform: scale(1);
+      }
+    }
+
+    @media (min-width: $laptop) {
+      &:hover,
+      &:focus {
+        svg {
+          transform: scale(1.5);
+        }
       }
     }
 
@@ -33,6 +48,107 @@
       fill: #503181;
 
       transition: all 0.3s ease;
+    }
+  }
+
+  &__modal {
+    position: absolute;
+    top: calc(100% + 15px);
+    right: 0;
+
+    display: none;
+
+    width: 400px;
+    max-width: calc(100vw - 26px);
+    padding: 20px 0 0 20px;
+
+    background-color: #fff;
+    box-shadow: 0 0 20px 0 rgba(31, 54, 74, 0.05);
+
+    input {
+      flex-grow: 2;
+
+      padding: 2px 20px;
+      margin-bottom: 20px;
+
+      @include ft-mul-4(16px, 36px, #2c2c2c);
+      letter-spacing: 0.05em;
+
+      border: none;
+      background-color: #f2f2f2;
+      border-radius: 6px;
+
+      transition: all 0.3s ease;
+
+      outline: none;
+      appearance: none;
+
+      @media (min-width: 768px) {
+        &::placeholder {
+          color: transparent;
+        }
+        &::-webkit-input-placeholder {
+          color: transparent
+        }
+
+        &::-moz-placeholder {
+          color: transparent
+        }
+
+        &:-moz-placeholder {
+          color: transparent
+        }
+
+        &:-ms-input-placeholder {
+          color: transparent
+        }
+      }
+
+      &::-ms-clear {
+        display: none;
+      }
+
+      &::-ms-reveal {
+        display: none;
+      }
+
+      &::-webkit-credentials-auto-fill-button,
+      &::-webkit-caps-lock-indicator {
+        visibility: hidden;
+        pointer-events: none;
+        position: absolute;
+        right: 0;
+      }
+    }
+
+    form {
+      width: 100%;
+
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+    }
+  }
+
+  &__results {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    a {
+      width: 100%;
+      margin-bottom: 20px;
+      padding: 0 20px;
+
+      @include ft-mul-4(16px, 1.2, #2c2c2c);
+      letter-spacing: 0.05em;
+      text-decoration: none;
+
+      &:hover,
+      &:focus {
+        text-decoration: underline;
+      }
     }
   }
 }

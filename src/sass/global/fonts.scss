@@ -38,7 +38,7 @@
        url('../fonts/muller-light.woff2') format('woff2'),
        url('../fonts/muller-light.woff') format('woff');
 }
-font-face {
+@font-face {
   font-family: 'Muller';
   font-style: normal;
   font-weight: 400;
@@ -46,7 +46,7 @@ font-face {
        url('../fonts/muller-regular.woff2') format('woff2'),
        url('../fonts/muller-regular.woff') format('woff');
 }
-font-face {
+@font-face {
   font-family: 'Muller';
   font-style: normal;
   font-weight: 500;
@@ -54,7 +54,7 @@ font-face {
        url('../fonts/muller-medium.woff2') format('woff2'),
        url('../fonts/muller-medium.woff') format('woff');
 }
-font-face {
+@font-face {
   font-family: 'Muller';
   font-style: normal;
   font-weight: 700;

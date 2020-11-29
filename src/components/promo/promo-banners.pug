@@ -1,4 +1,18 @@
 .promo-banners
-  ul.promo-banners__list
-    li.promo-banners__item
+  ul.promo-banners__list.swiper-wrapper
+    li.promo-banners__item.swiper-slide
       include promo-banner
+    li.promo-banners__item.swiper-slide
+      .promo-banner(style="background-color: pink")
+        .container
+          .promo-banner__content
+            a.promo-banner__category(href="#") Выпрямитель волос
+            a.promo-banner__title(href="") Это другой слайд
+            p.promo-banner__advantages
+              span Улучшенный способ укладки
+              span В два раза меньше повреждений волос
+            p.promo-banner__promotion Успей купить по&nbsp;выгодной&nbsp;цене!
+            .promo-banner__buy
+              span.promo-banner__price <span>39 990</span> руб
+              a.promo-banner__detail.btn-detail(href="") Подробнее
+

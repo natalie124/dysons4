@@ -3,6 +3,7 @@
   justify-content: flex-start;
   align-items: center;
   flex-wrap: wrap;
+  height: 100%;
 
   @media (max-width: $mobile) {
     justify-content: space-between;
@@ -11,6 +12,7 @@
 
   &__btn {
     position: relative;
+    z-index: 100;
 
     display: flex;
     flex-direction: column;
@@ -29,19 +31,26 @@
     transition: all 0.3s ease;
 
     cursor: pointer;
+    outline: none;
 
-    &:hover,
-    &:focus {
-      background-color: #513280;
-    }
+    @media (min-width: 768px) {
+      &:hover,
+      &:focus,
+      &.active {
+        background-color: #513280;
+      }
 
-    &:hover span,
-    &:focus span,
-    &:hover span::before,
-    &:focus span::before,
-    &:hover span::after,
-    &:focus span::after {
-      background-color: #ffffff;
+      &:hover span,
+      &:focus span,
+      &:hover span::before,
+      &:focus span::before,
+      &:hover span::after,
+      &:focus span::after,
+      &.active span,
+      &.active span::before,
+      &.active span::after {
+        background-color: #ffffff;
+      }
     }
 
     span::before,

@@ -2,7 +2,6 @@
 @import "global/variables";
 @import "global/mixins";
 @import "global/fonts";
-/*@import "global/animation";*/
 @import "global/global";
 // Блоки
 @import "blocks/buttons";
@@ -45,8 +44,9 @@
 @import "../components/product/product-files";
 @import "../components/modal-buy-click/modal-buy-click";
 @import "../components/modal-add/modal-add";
-
-/*@import "global/js";*/
+@import "../components/menu/menu";
+@import "../components/menu/submenu";
+@import "../components/menu/mobile-menu";
 
 
 

@@ -1,18 +1,19 @@
 .btn {
   position: relative;
 
-  display: inline-flex;
+  display: flex;
   justify-content: center;
   align-items: center;
 
   min-width: 245px;
-  min-height: 48px;
+  height: 48px;
   padding: 4px 10px 0;
 
   @include ft-mul-4(16px, 24px, #fff);
   letter-spacing: 0.005em;
   text-decoration: none;
   text-align: center;
+  vertical-align: middle;
 
   background-color: #513280;
   border: solid 2px #513280;
@@ -74,11 +75,6 @@
     border-color: #ebebeb;
 
     cursor: default;
-  }
-
-  span {
-    position: relative;
-    z-index: 2;
   }
 }
 .btn-detail {

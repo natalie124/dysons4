@@ -19,6 +19,7 @@
     align-items: flex-end;
 
     max-width: 555px;
+    width: 100%;
     padding: 9.6% 10.9% 2.7%;
 
     overflow: hidden;
@@ -72,6 +73,7 @@
     max-width: 285px;
     margin: 0 0 15px;
     padding: 0;
+    min-height: 48px;
 
     @include ft-mul-3(17px, 24px, #525252);
     letter-spacing: 0.005em;
@@ -93,15 +95,15 @@
   }
 
   &--banner &__title {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-
     max-width: 225px;
+    width: 100%;
 
     @include ft-mul-7(30px, 1.2, #fff);
     text-align: left;
+
+    span {
+      width: 100%;
+    }
 
     @media (max-width: $mobile) {
       max-width: 100%;
@@ -111,6 +113,7 @@
     }
 
     span {
+      width: 100%;
       margin-top: 23px;
       @include ft-mul-3(16px, 1.13, #fff);
 

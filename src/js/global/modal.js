@@ -23,7 +23,7 @@
     { // для модалки купить в клик
       BTN: '.js-buy-click-btn',
       MODAL: '.js-modal-buy-click'
-    }
+    },
   ];
 
   if (!modals) {

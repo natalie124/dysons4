@@ -1,55 +1,22 @@
 'use strict';
-// (function() {
-//   // для главного баннера
-//   var swiper = new Swiper('.main-banner', {
-//     slidesPerView: 1,
-//     spaceBetween: 0,
-//     speed: 1000,
-//     loop: true,
-//     grabCursor: true,
-//     keyboard: {
-//       enabled: true,
-//     },
-//     pagination: {
-//       el: '.main-banner__pagination.swiper-pagination',
-//       clickable: true,
-//     },
-//     navigation: {
-//       nextEl: '.main-banner__next',
-//       prevEl: '.main-banner__prev',
-//     },
-//   });
-// })();
-// (function() {
-// // для карточек
-//   function activateSliders() {
-//     var sliders = document.querySelectorAll('.cards-slider');
-
-//     if (!sliders) {
-//       return;
-//     }
-
-//     Array.prototype.forEach.call(sliders, function(it) {
-//       var slider = it.querySelector('.cards-slider__wrapper');
-//       var next = it.querySelector('.cards-slider__next');
-//       var prev = it.querySelector('.cards-slider__prev');
-
-//       console.log(slider);
-
-//       var swiper = new Swiper(slider, {
-//         slidesPerView: 'auto',
-//         slidesPerGroup: 3,
-//         navigation: {
-//           nextEl: next,
-//           prevEl: prev,
-//         },
-//         speed: 400,
-//       });
-//     });
-//   }
-
-//   activateSliders();
-// })();
+(function() {
+  // для главного баннера
+  var swiper = new Swiper('.promo-banners', {
+    autoplay: {
+      delay: 5000,
+    },
+    loop: true,
+    effect: 'fade',
+    slidesPerView: 1,
+    spaceBetween: 0,
+    speed: 1000,
+    loop: true,
+    grabCursor: true,
+    keyboard: {
+      enabled: true,
+    },
+  });
+})();
 
 (function() {
 // для галереи

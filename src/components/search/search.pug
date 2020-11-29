@@ -1,3 +1,11 @@
 .search
-  button.search__btn(type="button" title="Поиск")
+  button.search__btn.js-search-btn(type="button" title="Поиск")
     +svg("search", 14, 14)
+
+  .search__modal.js-search
+    form
+      input(type="search" placeholder="Поиск"  name="search" id="site-search")
+      label.visually-hidden(for="site-search") Поиск
+      button.search__btn(type="submit" title="Поиск")
+        +svg("search", 14, 14)
+    .search__results

@@ -1,0 +1,56 @@
+.submenu {
+  width: 100%;
+  padding: 0 20px;
+
+  list-style: none;
+
+  @media (max-width: $laptop) {
+    padding: 0;
+  }
+
+  @media (max-width: $tablet) {
+    padding-right: 15px;
+  }
+
+  @media (max-width: $mobile) {
+    display: none;
+
+    padding: 0 0 30px 45px;
+  }
+
+  &__item {
+    width: 100%;
+  }
+
+  &__link {
+    display: inline-flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 30px;
+
+    @include ft-mul-3(14px, 1.29, #525252);
+    text-decoration: none;
+
+    transition: all 0.3s ease;
+
+    @media (max-width: $desktop) {
+      margin-bottom: 15px;
+    }
+
+    @media (max-width: $laptop) {
+     margin: 0;
+    }
+
+    @media (max-width: $tablet) {
+      padding: 15px 0;
+    }
+
+    &:hover,
+    &:focus {
+      color: #9077b8;
+    }
+  }
+}

@@ -20,7 +20,7 @@
     align-items: flex-end;
     flex-grow: 2;
 
-    @include ft-mul-4(14, 1.86, #737373);
+    @include ft-mul-4(14px, 1.86, #737373);
     letter-spacing: 0.005em;
 
     @media (max-width: $mobile) {
@@ -41,7 +41,7 @@
   }
 
   td:last-child {
-    @include ft-mul-5(14, 1.86, #2f2f2f);
+    @include ft-mul-5(14px, 1.86, #2f2f2f);
     letter-spacing: 0.005em;
   }
 }
