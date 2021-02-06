@@ -3,8 +3,6 @@ $(function() {
   var btn = $('.js-search-btn');
   var menu = $('.js-search');
 
-  console.log('!');
-
   function onEscPress(e) {
     if (e.keyCode === 27) {
       btn.removeClass('active');

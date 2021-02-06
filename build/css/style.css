@@ -142,8 +142,6 @@ body {
 
 img {
   max-width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
 }
 
 input {
@@ -1769,9 +1767,11 @@ footer {
   }
 }
 
-.nav-menu__link:hover, .nav-menu__link:focus {
-  background-color: #513280;
-  color: #ffffff;
+@media (min-width: 1023px) {
+  .nav-menu__link:hover, .nav-menu__link:focus {
+    background-color: #513280;
+    color: #ffffff;
+  }
 }
 
 .nav-menu--light .nav-menu__link {
@@ -2655,8 +2655,8 @@ footer {
   left: 0;
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 .card--banner .card__img {
@@ -3849,8 +3849,8 @@ footer {
   display: block;
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 .cart-items__img:hover, .cart-items__img:focus {
@@ -4180,8 +4180,8 @@ footer {
   display: block;
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 .cart-items__img:hover, .cart-items__img:focus {
@@ -5131,6 +5131,8 @@ footer {
   display: block;
   width: 100%;
   height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 @media (max-width: 767px) {
